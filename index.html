@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagus Febriansyah, S.T - Performance Marketing & Growth Specialist Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        metaBlue: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            500: '#0064E0', // Meta Primary Brand Blue
+                            600: '#0052b8',
+                            700: '#004192',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafafa;
+            color: #18181b;
+        }
+        /* Custom smooth transition for interactive elements */
+        .transition-all-custom {
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-delay-1 { animation-delay: 300ms; }
+        .reveal-delay-2 { animation-delay: 600ms; }
+        .reveal-delay-3 { animation-delay: 900ms; }
+    </style>
+</head>
+<body class="overflow-x-hidden antialiased selection:bg-metaBlue-100 selection:text-metaBlue-700">
+
+<!-- PRELOADER REVEAL NAME ANIMATION -->
+<div id="preloader" class="fixed inset-0 z-50 bg-white flex flex-col items-center justify-center transform translate-y-0 transition-transform duration-[1500ms] ease-[cubic-bezier(0.85,0,0.15,1)]">
+    <div class="text-center px-6">
+        <div class="overflow-hidden mb-3">
+            <h1 id="reveal-name" class="text-2xl sm:text-4xl font-light tracking-[0.2em] text-zinc-900 opacity-0 translate-y-12 transition-all duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
+                BAGUS FEBRIANSYAH, S.T
+            </h1>
+        </div>
+        <div class="overflow-hidden mb-8">
+            <p id="reveal-title" class="text-[10px] sm:text-xs tracking-[0.3em] text-metaBlue-500 uppercase opacity-0 translate-y-8 transition-all duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
+                Performance Marketing & Growth Specialist
+            </p>
+        </div>
+        <div class="w-48 h-[2px] bg-zinc-100 mx-auto relative overflow-hidden">
+            <div id="loader-bar" class="absolute top-0 left-0 h-full w-0 bg-metaBlue-500 transition-all duration-[2000ms] ease-out"></div>
+        </div>
+    </div>
+</div>
+
+<!-- STICKY HEADER -->
+<header class="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md border-b border-zinc-100 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div class="flex flex-col">
+            <span class="text-sm font-semibold tracking-wider text-zinc-900 uppercase">Bagus Febriansyah, S.T</span>
+            <span class="text-[9px] text-zinc-500 uppercase tracking-widest">Performance Marketing & Growth Specialist</span>
+        </div>
+        
+        <!-- Desktop Nav Links -->
+        <nav class="hidden lg:flex items-center space-x-6 text-xs font-medium tracking-wider uppercase text-zinc-500">
+            <a href="#intro" class="hover:text-metaBlue-500 transition-colors">Perkenalan</a>
+            
+            <!-- Studi Kasus Hover Dropdown Menu -->
+            <div class="relative group py-5">
+                <button class="hover:text-metaBlue-500 flex items-center gap-1 transition-colors uppercase focus:outline-none">
+                    Studi Kasus
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 transform group-hover:rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                
+                <!-- Dropdown Menu Box -->
+                <div class="absolute top-full left-1/2 -translate-x-1/2 w-80 bg-white border border-zinc-100 rounded-xl shadow-xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                    <a href="#cs1" class="block px-5 py-2.5 hover:bg-metaBlue-50 transition-colors">
+                        <span class="font-bold block text-metaBlue-500 text-[9px] uppercase tracking-wider">Studi Kasus 1</span>
+                        <span class="text-[11px] text-zinc-700 font-medium">Membangun Brand Fashion dari Nol</span>
+                    </a>
+                    <a href="#cs2" class="block px-5 py-2.5 hover:bg-metaBlue-50 transition-colors">
+                        <span class="font-bold block text-metaBlue-500 text-[9px] uppercase tracking-wider">Studi Kasus 2</span>
+                        <span class="text-[11px] text-zinc-700 font-medium">Bangkit Setelah Hampir Kolaps</span>
+                    </a>
+                    <a href="#cs3" class="block px-5 py-2.5 hover:bg-metaBlue-50 transition-colors">
+                        <span class="font-bold block text-metaBlue-500 text-[9px] uppercase tracking-wider">Studi Kasus 3</span>
+                        <span class="text-[11px] text-zinc-700 font-medium">Akurasi Tracking & Kualitas Leads</span>
+                    </a>
+                    <a href="#cs4" class="block px-5 py-2.5 hover:bg-metaBlue-50 transition-colors">
+                        <span class="font-bold block text-metaBlue-500 text-[9px] uppercase tracking-wider">Studi Kasus 4</span>
+                        <span class="text-[11px] text-zinc-700 font-medium">Mengoptimalkan Landing Page (CRO)</span>
+                    </a>
+                    <a href="#cs5" class="block px-5 py-2.5 hover:bg-metaBlue-50 transition-colors">
+                        <span class="font-bold block text-metaBlue-500 text-[9px] uppercase tracking-wider">Studi Kasus 5</span>
+                        <span class="text-[11px] text-zinc-700 font-medium">Adaptasi Pasca Perubahan iOS</span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="#competency" class="hover:text-metaBlue-500 transition-colors">Kompetensi</a>
+            <a href="#footer" class="hover:text-metaBlue-500 transition-colors">Hubungi Saya</a>
+        </nav>
+
+        <!-- Quick contact launcher -->
+        <div class="flex items-center gap-2">
+            <a href="#footer" class="px-5 py-2 text-xs font-semibold tracking-wider text-white bg-metaBlue-500 hover:bg-metaBlue-600 rounded-full transition-colors uppercase">
+                Hubungi
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- STICKY SIDE DOTS NAVIGATION -->
+<div class="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col space-y-4">
+    <a href="#intro" class="group flex items-center justify-end space-x-2" title="Perkenalan">
+        <span class="text-[10px] tracking-wider uppercase text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Perkenalan</span>
+        <div class="w-2.5 h-2.5 rounded-full border border-zinc-300 bg-white group-hover:bg-metaBlue-500 group-hover:border-metaBlue-500 transition-colors"></div>
+    </a>
+    <a href="#cs1" class="group flex items-center justify-end space-x-2" title="Studi Kasus 1">
+        <span class="text-[10px] tracking-wider uppercase text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Studi Kasus 1</span>
+        <div class="w-2.5 h-2.5 rounded-full border border-zinc-300 bg-white group-hover:bg-metaBlue-500 group-hover:border-metaBlue-500 transition-colors"></div>
+    </a>
+    <a href="#cs2" class="group flex items-center justify-end space-x-2" title="Studi Kasus 2">
+        <span class="text-[10px] tracking-wider uppercase text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Studi Kasus 2</span>
+        <div class="w-2.5 h-2.5 rounded-full border border-zinc-300 bg-white group-hover:bg-metaBlue-500 group-hover:border-metaBlue-500 transition-colors"></div>
+    </a>
+    <a href="#cs3" class="group flex items-center justify-end space-x-2" title="Studi Kasus 3">
+        <span class="text-[10px] tracking-wider uppercase text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Studi Kasus 3</span>
+        <div class="w-2.5 h-2.5 rounded-full border border-zinc-300 bg-white group-hover:bg-metaBlue-500 group-hover:border-metaBlue-500 transition-colors"></div>
+    </a>
+    <a href="#cs4" class="group flex items-center justify-end space-x-2" title="Studi Kasus 4">
+        <span class="text-[10px] tracking-wider uppercase text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Studi Kasus 4</span>
+        <div class="w-2.5 h-2.5 rounded-full border border-zinc-300 bg-white group-hover:bg-metaBlue-500 group-hover:border-metaBlue-500 transition-colors"></div>
+    </a>
+    <a href="#cs5" class="group flex items-center justify-end space-x-2" title="Studi Kasus 5">
+        <span class="text-[10px] tracking-wider uppercase text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Studi Kasus 5</span>
+        <div class="w-2.5 h-2.5 rounded-full border border-zinc-300 bg-white group-hover:bg-metaBlue-500 group-hover:border-metaBlue-500 transition-colors"></div>
+    </a>
+    <a href="#competency" class="group flex items-center justify-end space-x-2" title="Kompetensi">
+        <span class="text-[10px] tracking-wider uppercase text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Kompetensi</span>
+        <div class="w-2.5 h-2.5 rounded-full border border-zinc-300 bg-white group-hover:bg-metaBlue-500 group-hover:border-metaBlue-500 transition-colors"></div>
+    </a>
+</div>
+
+<!-- MAIN CONTAINER -->
+<main class="relative z-10 pt-16">
+
+    <!-- SECTION 1: PERKENALAN PROFESIONAL -->
+    <section id="intro" class="min-h-screen flex items-center justify-center bg-white border-b border-zinc-100 py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-[11px] font-bold tracking-[0.2em] text-metaBlue-500 uppercase block mb-6">PERKENALAN PROFESIONAL</span>
+            
+            <h2 class="text-3xl md:text-5xl font-light tracking-tight text-zinc-900 leading-tight mb-8">
+                &ldquo;Saya bukan orang yang belajar digital marketing dari teori. <br class="hidden md:inline"/>
+                <span class="font-normal text-zinc-950 underline decoration-metaBlue-200 decoration-4 underline-offset-8">Saya belajar langsung dari bisnis yang saya bangun sendiri.</span>&rdquo;
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mt-12 items-start">
+                <div class="md:col-span-7 space-y-6 text-zinc-600 text-sm md:text-base leading-relaxed">
+                    <p>
+                        Sejak tahun 2019, saya menjalankan bisnis dropship sebuah produk fashion wanita dan menggunakan Meta Ads sebagai mesin utama pertumbuhan bisnis. Dari modal iklan Rp200.000/hari, saya berhasil membangun tim, meningkatkan penjualan, dan menjalankan bisnis yang profit selama bertahun-tahun.
+                    </p>
+                    <p class="text-xs md:text-sm text-zinc-400 italic">
+                        Selain mengelola bisnis sendiri, saya juga membantu berbagai jenis bisnis seperti fashion, skincare, travel umroh, aqiqah, software, hingga jasa profesional untuk mendapatkan lebih banyak leads melalui digital marketing.
+                    </p>
+                </div>
+                
+                <div class="md:col-span-5 bg-zinc-50 border border-zinc-100 p-6 rounded-2xl">
+                    <h3 class="text-xs font-bold tracking-widest text-metaBlue-500 uppercase mb-4">KEAHLIAN PRAKTIS YANG SAYA KUASAI:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-zinc-700">
+                            <span class="w-1.5 h-1.5 rounded-full bg-metaBlue-500"></span>
+                            Meta Ads
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-zinc-700">
+                            <span class="w-1.5 h-1.5 rounded-full bg-metaBlue-500"></span>
+                            Lead Generation
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-zinc-700">
+                            <span class="w-1.5 h-1.5 rounded-full bg-metaBlue-500"></span>
+                            Landing Page Optimization
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-zinc-700">
+                            <span class="w-1.5 h-1.5 rounded-full bg-metaBlue-500"></span>
+                            Funnel Optimization
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-zinc-700">
+                            <span class="w-1.5 h-1.5 rounded-full bg-metaBlue-500"></span>
+                            Tracking & Analytics
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-zinc-700">
+                            <span class="w-1.5 h-1.5 rounded-full bg-metaBlue-500"></span>
+                            Creative Testing
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 flex justify-start">
+                <a href="#cs1" class="group flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-metaBlue-500 hover:text-metaBlue-700 transition-colors">
+                    Lihat Studi Kasus
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: STUDI KASUS #1 -->
+    <section id="cs1" class="min-h-screen flex items-center justify-center bg-zinc-50 border-b border-zinc-100 py-24 px-6">
+        <div class="max-w-5xl mx-auto w-full">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-12 pb-6 border-b border-zinc-200/60">
+                <div>
+                    <span class="text-[11px] font-bold tracking-[0.2em] text-metaBlue-500 uppercase block mb-1">CASE STUDY #1</span>
+                    <h2 class="text-2xl md:text-3xl font-light text-zinc-900">Membangun Brand Fashion dari Nol dengan Meta Ads</h2>
+                    <p class="text-xs text-zinc-500 mt-1">Studi Kasus Pertumbuhan & Skalabilitas Awal (2019)</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <span class="inline-block bg-metaBlue-500 text-white text-[10px] font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full shadow-sm">
+                        Fokus: Target Market Fit & Meta Ads
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Left Details -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div>
+                        <h3 class="text-xs font-bold tracking-wider text-zinc-400 uppercase mb-3">LATAR BELAKANG</h3>
+                        <p class="text-zinc-600 text-sm md:text-base leading-relaxed">
+                            Pada tahun 2019 saya memutuskan menjual produk fashion wanita secara online. Saat itu saya tidak memiliki pengalaman bisnis maupun pengalaman menjalankan iklan. Yang saya miliki hanya keyakinan bahwa iklan bisa menjadi mesin pertumbuhan bisnis.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xs font-bold tracking-wider text-zinc-400 uppercase mb-4">APA YANG SAYA LAKUKAN</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-sm text-zinc-700">
+                                <svg class="w-5 h-5 text-metaBlue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Menjalankan Meta Ads sejak hari pertama.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-zinc-700">
+                                <svg class="w-5 h-5 text-metaBlue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Mengoptimasi campaign berdasarkan data.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-zinc-700">
+                                <svg class="w-5 h-5 text-metaBlue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Menguji berbagai creative & penawaran.</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-zinc-700">
+                                <svg class="w-5 h-5 text-metaBlue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Melakukan scale-up secara bertahap.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Outcomes Widget -->
+                <div class="lg:col-span-5 bg-white border border-zinc-200 p-8 rounded-2xl shadow-sm">
+                    <h3 class="text-xs font-bold tracking-wider text-metaBlue-500 uppercase mb-6 pb-2 border-b border-zinc-100">HASIL YANG DICAPAI</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="p-2 bg-metaBlue-50 rounded-lg text-metaBlue-500">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-zinc-900">Profit Sejak Hari Pertama</h4>
+                                <p class="text-xs text-zinc-500">Berhasil membuktikan kecocokan market (Market Fit) sejak hari pertama beriklan.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-2 bg-metaBlue-50 rounded-lg text-metaBlue-500">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-zinc-900">Budget Iklan Rp1 Juta / hari</h4>
+                                <p class="text-xs text-zinc-500">Scale-up performa iklan secara bertahap dan konsisten.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-2 bg-metaBlue-50 rounded-lg text-metaBlue-500">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-zinc-900">Membentuk Tim 5 Orang</h4>
+                                <p class="text-xs text-zinc-500">Mampu mendelegasikan tugas seiring dengan ekspansi operasional bisnis.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-2 bg-metaBlue-50 rounded-lg text-metaBlue-500">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-zinc-900">Konsisten & Bertumbuh</h4>
+                                <p class="text-xs text-zinc-500">Menjalankan bisnis yang menghasilkan profit secara konsisten dalam jangka panjang.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: STUDI KASUS #2 -->
+    <section id="cs2" class="min-h-screen flex items-center justify-center bg-white border-b border-zinc-100 py-24 px-6">
+        <div class="max-w-5xl mx-auto w-full">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-12 pb-6 border-b border-zinc-200/60">
+                <div>
+                    <span class="text-[11px] font-bold tracking-[0.2em] text-metaBlue-500 uppercase block mb-1">CASE STUDY #2</span>
+                    <h2 class="text-2xl md:text-3xl font-light text-zinc-900">Bangkit Setelah Bisnis Hampir Kolaps</h2>
+                    <p class="text-xs text-zinc-500 mt-1">Belajar dari Krisis Operasional & Supply Chain</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <span class="inline-block bg-metaBlue-500 text-white text-[10px] font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full shadow-sm">
+                        Fokus: Manajemen Risiko & Pivot Bisnis
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+                <!-- Left Details -->
+                <div class="lg:col-span-6 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xs font-bold tracking-wider text-rose-500 uppercase mb-3">LATAR BELAKANG & MASALAH</h3>
+                            <p class="text-zinc-600 text-sm md:text-base leading-relaxed">
+                                Di masa Ramadhan, penjualan meningkat hampir dua kali lipat. Karena optimis, saya menaikkan budget iklan secara agresif. Namun vendor produksi gagal memenuhi pesanan sehingga ratusan order tidak terkirim dan bisnis mengalami kerugian besar.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xs font-bold tracking-wider text-metaBlue-500 uppercase mb-4">HASIL DARI PIVOT STRATEGIS</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3 text-sm text-zinc-700">
+                                    <svg class="w-5 h-5 text-metaBlue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Membangun kembali brand fashion baru.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-zinc-700">
+                                    <svg class="w-5 h-5 text-metaBlue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Menyesuaikan positioning ke market yang berbeda.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-zinc-700">
+                                    <svg class="w-5 h-5 text-metaBlue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Kembali menjalankan bisnis secara profit menggunakan Meta Ads.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Quote Highlight -->
+                <div class="lg:col-span-6 bg-zinc-50 border border-zinc-150 p-8 rounded-2xl flex flex-col justify-center">
+                    <span class="text-3xl text-metaBlue-200 font-serif leading-none select-none mb-2">“</span>
+                    <h3 class="text-xs font-bold tracking-wider text-metaBlue-500 uppercase mb-4">PELAJARAN YANG SAYA DAPAT</h3>
+                    <p class="text-zinc-700 italic text-sm md:text-base leading-relaxed font-light">
+                        "Pengalaman ini mengubah cara saya melihat marketing. Saya belajar bahwa pertumbuhan bisnis tidak hanya soal menaikkan budget iklan, tetapi juga memastikan operasional, supply chain, dan customer experience siap mendukung pertumbuhan tersebut."
+                    </p>
+                    <span class="text-3xl text-metaBlue-200 font-serif leading-none select-none text-right mt-2">”</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: STUDI KASUS #3 -->
+    <section id="cs3" class="min-h-screen flex items-center justify-center bg-zinc-50 border-b border-zinc-100 py-24 px-6">
+        <div class="max-w-5xl mx-auto w-full">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-12 pb-6 border-b border-zinc-200/60">
+                <div>
+                    <span class="text-[11px] font-bold tracking-[0.2em] text-metaBlue-500 uppercase block mb-1">CASE STUDY #3</span>
+                    <h2 class="text-2xl md:text-3xl font-light text-zinc-900">Memperbaiki Akurasi Tracking dan Kualitas Leads</h2>
+                    <p class="text-xs text-zinc-500 mt-1">Sinkronisasi Data Dashboard Meta Ads dengan Data Aktual Bisnis</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <span class="inline-block bg-metaBlue-500 text-white text-[10px] font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full shadow-sm">
+                        Fokus: Tracking Integrity & Data Cleanliness
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Left Details -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div>
+                        <h3 class="text-xs font-bold tracking-wider text-zinc-400 uppercase mb-3">LATAR BELAKANG & MASALAH</h3>
+                        <p class="text-zinc-600 text-sm leading-relaxed mb-4">
+                            Saya sering menemukan kondisi dimana dashboard Meta Ads menunjukkan banyak leads masuk, tetapi tim sales menerima jauh lebih sedikit.
+                        </p>
+                        
+                        <!-- Interative Discrepancy Diagram -->
+                        <div class="bg-white border border-zinc-150 rounded-xl p-5 shadow-sm space-y-4">
+                            <span class="text-[10px] font-semibold text-metaBlue-500 uppercase tracking-widest block">Ilustrasi Discrepancy Data</span>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-rose-50 border border-rose-100 p-4 rounded-lg text-center">
+                                    <span class="text-xs text-rose-500 font-bold uppercase tracking-wider block mb-1">DASHBOARD</span>
+                                    <span class="text-3xl font-bold text-rose-600">10 Leads</span>
+                                </div>
+                                <div class="bg-metaBlue-50 border border-metaBlue-100 p-4 rounded-lg text-center">
+                                    <span class="text-xs text-metaBlue-500 font-bold uppercase tracking-wider block mb-1">WHATSAPP AKTUAL</span>
+                                    <span class="text-3xl font-bold text-metaBlue-600">3 Leads</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-rose-600 italic mt-2">
+                                Akibatnya, algoritma pembelajaran Meta belajar dari data conversion yang salah.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xs font-bold tracking-wider text-zinc-400 uppercase mb-4">APA YANG SAYA LAKUKAN</h3>
+                        <ul class="space-y-2 text-sm text-zinc-700">
+                            <li class="flex items-center gap-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-metaBlue-500"></div>
+                                Melakukan audit mendalam pada funnel & pixel tracking.
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-metaBlue-500"></div>
+                                Memperkecil selisih (discrepancy) data dashboard vs WA.
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-metaBlue-500"></div>
+                                Memperbaiki konfigurasi custom & standard event tracking.
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-metaBlue-500"></div>
+                                Memastikan Meta Pixel menerima feedback sinyal yang akurat.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Results Box -->
+                <div class="lg:col-span-5 bg-white border border-zinc-200 p-8 rounded-2xl shadow-sm space-y-6 self-stretch">
+                    <h3 class="text-xs font-bold tracking-wider text-metaBlue-500 uppercase mb-2 pb-2 border-b border-zinc-100">HASIL OPTIMALISASI</h3>
+                    <div class="space-y-5">
+                        <div class="border-l-2 border-metaBlue-500 pl-4">
+                            <h4 class="text-sm font-semibold text-zinc-900">Akurasi data tracking meningkat signifikan</h4>
+                            <p class="text-xs text-zinc-500 mt-1">Sinyal conversion terekam presisi tanpa ada data hantu.</p>
+                        </div>
+                        <div class="border-l-2 border-metaBlue-500 pl-4">
+                            <h4 class="text-sm font-semibold text-zinc-900">Kualitas leads yang masuk terbukti jauh lebih baik</h4>
+                            <p class="text-xs text-zinc-500 mt-1">Mengeliminasi junk traffic & spam submission.</p>
+                        </div>
+                        <div class="border-l-2 border-metaBlue-500 pl-4">
+                            <h4 class="text-sm font-semibold text-zinc-900">Optimasi campaign adset belajar dengan efektif</h4>
+                            <p class="text-xs text-zinc-500 mt-1">Adset belajar dari buyer profile yang akurat secara real-time.</p>
+                        </div>
+                        <div class="border-l-2 border-metaBlue-500 pl-4">
+                            <h4 class="text-sm font-semibold text-zinc-900">Potensi closing dari leads yang masuk menjadi lebih tinggi</h4>
+                            <p class="text-xs text-zinc-500 mt-1">Tim sales menerima kontak bernilai tinggi yang siap beli.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: STUDI KASUS #4 -->
+    <section id="cs4" class="min-h-screen flex items-center justify-center bg-white border-b border-zinc-100 py-24 px-6">
+        <div class="max-w-5xl mx-auto w-full">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-12 pb-6 border-b border-zinc-200/60">
+                <div>
+                    <span class="text-[11px] font-bold tracking-[0.2em] text-metaBlue-500 uppercase block mb-1">CASE STUDY #4</span>
+                    <h2 class="text-2xl md:text-3xl font-light text-zinc-900">Mengoptimalkan Landing Page untuk Meningkatkan Leads</h2>
+                    <p class="text-xs text-zinc-500 mt-1">Menggeser Fokus dari Evaluasi Iklan Menuju Efisiensi Konversi Laman</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <span class="inline-block bg-metaBlue-500 text-white text-[10px] font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full shadow-sm">
+                        Fokus: Conversion Rate Optimization (CRO)
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Left Column -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <h3 class="text-xs font-bold tracking-wider text-zinc-400 uppercase mb-3">LATAR BELAKANG & PENDEKATAN</h3>
+                        <p class="text-zinc-600 text-sm leading-relaxed mb-4">
+                            Saya melihat banyak bisnis hanya fokus memperbaiki iklan, tetapi mengabaikan landing page. Padahal, penurunan conversion rate terbesar seringkali terjadi sesaat setelah target konsumen berhasil mengklik iklan.
+                        </p>
+                    </div>
+
+                    <!-- Flow Visualizer -->
+                    <div class="bg-zinc-50 rounded-xl p-5 border border-zinc-100">
+                        <span class="text-[10px] font-semibold text-metaBlue-500 uppercase tracking-widest block mb-4">ALUR UTAMA FUNNEL</span>
+                        <div class="flex items-center justify-between gap-2">
+                            <div class="bg-white p-3 rounded border border-zinc-200 text-center flex-1">
+                                <span class="text-[10px] font-bold text-zinc-800 block">OCLP</span>
+                                <span class="text-[8px] text-zinc-400 uppercase block leading-none mt-1">(Outbound Click Landing Page)</span>
+                            </div>
+                            <div class="text-metaBlue-500 font-bold">&rarr;</div>
+                            <div class="bg-white p-3 rounded border border-zinc-200 text-center flex-1">
+                                <span class="text-[10px] font-bold text-zinc-800 block">ATC / Klik Tombol WhatsApp</span>
+                                <span class="text-[8px] text-zinc-400 uppercase block leading-none mt-1">(Click-to-WA)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xs font-bold tracking-wider text-zinc-400 uppercase mb-3">APA YANG SAYA LAKUKAN</h3>
+                        <ul class="space-y-2 text-sm text-zinc-700">
+                            <li class="flex items-center gap-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-metaBlue-500"></div>
+                                Optimasi kecepatan muat landing page (loading speed).
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-metaBlue-500"></div>
+                                Mengoptimalkan penempatan & teks Call-to-Action (CTA).
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-metaBlue-500"></div>
+                                Memperbaiki arsitektur pesan dan struktur penawaran.
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-metaBlue-500"></div>
+                                Melakukan proses testing dan iterasi berkelanjutan.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Column (Target & Metrics) -->
+                <div class="lg:col-span-6 space-y-6">
+                    <h3 class="text-xs font-bold tracking-wider text-metaBlue-500 uppercase pb-2 border-b border-zinc-100">✔ METRIK TARGET & HASIL</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Metric Box 1 -->
+                        <div class="bg-zinc-50 p-6 rounded-2xl border border-zinc-100">
+                            <div class="flex items-baseline justify-between mb-2">
+                                <span class="text-sm font-semibold text-zinc-800">OCLP (Outbound Click to LP)</span>
+                                <span class="text-2xl font-bold text-metaBlue-500">> 80%</span>
+                            </div>
+                            <!-- Bar visualization -->
+                            <div class="w-full bg-zinc-200 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-metaBlue-500 h-full rounded-full" style="width: 85%;"></div>
+                            </div>
+                            <p class="text-xs text-zinc-500 mt-2">Meminimalkan trafik rontok di tengah jalan sebelum LP termuat.</p>
+                        </div>
+
+                        <!-- Metric Box 2 -->
+                        <div class="bg-zinc-50 p-6 rounded-2xl border border-zinc-100">
+                            <div class="flex items-baseline justify-between mb-2">
+                                <span class="text-sm font-semibold text-zinc-800">ATC / Click-to-WA</span>
+                                <span class="text-2xl font-bold text-metaBlue-500">> 10%</span>
+                            </div>
+                            <!-- Bar visualization -->
+                            <div class="w-full bg-zinc-200 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-metaBlue-500 h-full rounded-full" style="width: 65%;"></div>
+                            </div>
+                            <p class="text-xs text-zinc-500 mt-2">Mendorong proporsi pengunjung untuk masuk ke chat sales.</p>
+                        </div>
+
+                        <!-- Metric Box 3 -->
+                        <div class="bg-zinc-50 p-6 rounded-2xl border border-zinc-100">
+                            <h4 class="text-sm font-semibold text-zinc-800 mb-1">Kuantitas & Kualitas Leads</h4>
+                            <p class="text-xs text-zinc-500">Mendapatkan volume leads lebih besar dengan efisiensi biaya secara berkelanjutan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: STUDI KASUS #5 -->
+    <section id="cs5" class="min-h-screen flex items-center justify-center bg-zinc-50 border-b border-zinc-100 py-24 px-6">
+        <div class="max-w-5xl mx-auto w-full">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-12 pb-6 border-b border-zinc-200/60">
+                <div>
+                    <span class="text-[11px] font-bold tracking-[0.2em] text-metaBlue-500 uppercase block mb-1">CASE STUDY #5</span>
+                    <h2 class="text-2xl md:text-3xl font-light text-zinc-900">Adaptasi Pasca Perubahan iOS dan Facebook Tracking</h2>
+                    <p class="text-xs text-zinc-500 mt-1">Mengatasi Blindspot Data Atribusi Melalui Server-Side Tracking</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <span class="inline-block bg-metaBlue-500 text-white text-[10px] font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full shadow-sm">
+                        Fokus: Advanced Event Attribution & Server-side tracking
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Left Details -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <h3 class="text-xs font-bold tracking-wider text-zinc-400 uppercase mb-3">LATAR BELAKANG & HAMBATAN</h3>
+                        <p class="text-zinc-600 text-sm md:text-base leading-relaxed">
+                            Perubahan kebijakan privasi Apple (iOS 14+) membuat kualitas tracking berbasis browser web (Meta Pixel standar) menurun drastis. Akibat hilangnya sinyal atribusi ini, banyak advertiser kesulitan mengukur performa campaign dengan akurat.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xs font-bold tracking-wider text-zinc-400 uppercase mb-4">APA YANG SAYA PELAJARI & IMPLEMENTASIKAN</h3>
+                        <p class="text-zinc-600 text-sm leading-relaxed mb-4">
+                            Untuk menstabilkan kinerja periklanan kembali, saya mendalami dan mengkonfigurasi infrastruktur tracking alternatif modern:
+                        </p>
+                        
+                        <!-- Mini diagram components -->
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="border border-metaBlue-100 bg-white p-4 rounded-xl text-center">
+                                <span class="text-xs font-semibold text-metaBlue-500 block">Meta Pixel</span>
+                                <span class="text-[9px] text-zinc-400 uppercase block mt-1 font-medium">Browser-side backup</span>
+                            </div>
+                            <div class="border border-metaBlue-100 bg-white p-4 rounded-xl text-center">
+                                <span class="text-xs font-semibold text-metaBlue-500 block">CAPI</span>
+                                <span class="text-[9px] text-zinc-400 uppercase block mt-1 font-medium">Direct server push</span>
+                            </div>
+                            <div class="border border-metaBlue-100 bg-white p-4 rounded-xl text-center">
+                                <span class="text-xs font-semibold text-metaBlue-500 block">Server Tracking</span>
+                                <span class="text-[9px] text-zinc-400 uppercase block mt-1 font-medium">Infrastruktur GTM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Solutions -->
+                <div class="lg:col-span-6 bg-white border border-zinc-200 p-8 rounded-2xl shadow-sm space-y-6">
+                    <h3 class="text-xs font-bold tracking-wider text-metaBlue-500 uppercase pb-2 border-b border-zinc-100">HASIL PENERAPAN SOLUSI</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-metaBlue-50 flex items-center justify-center text-metaBlue-500 shrink-0 mt-0.5">✔</div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-zinc-900">Akurasi data atribusi iklan jauh lebih baik.</h4>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-metaBlue-50 flex items-center justify-center text-metaBlue-500 shrink-0 mt-0.5">✔</div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-zinc-900">Optimasi & pengiriman campaign menjadi lebih stabil.</h4>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-metaBlue-50 flex items-center justify-center text-metaBlue-500 shrink-0 mt-0.5">✔</div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-zinc-900">Kualitas signal rating yang diterima Meta meningkat.</h4>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-metaBlue-50 flex items-center justify-center text-metaBlue-500 shrink-0 mt-0.5">✔</div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-zinc-900">Terbangunnya fondasi tracking yang kokoh untuk scaling budget.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: RINGKASAN KOMPETENSI -->
+    <section id="competency" class="min-h-screen flex items-center justify-center bg-white border-b border-zinc-100 py-24 px-6">
+        <div class="max-w-5xl mx-auto w-full">
+            <div class="mb-12 text-center max-w-2xl mx-auto">
+                <span class="text-[11px] font-bold tracking-[0.2em] text-metaBlue-500 uppercase block mb-1">RINGKASAN KOMPETENSI</span>
+                <h2 class="text-2xl md:text-3xl font-light text-zinc-900">Keahlian Utama & Toolbox Teknis</h2>
+                <p class="text-xs text-zinc-500 mt-2">Kombinasi keahlian operasional media berbayar, analitik data, dan strategi bisnis</p>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="border border-zinc-150 p-6 rounded-2xl bg-zinc-50 flex flex-col justify-between hover:border-metaBlue-200 transition-colors">
+                    <div>
+                        <div class="w-8 h-8 rounded-lg bg-metaBlue-500 text-white flex items-center justify-center text-xs font-bold mb-4">01</div>
+                        <h3 class="text-sm font-bold tracking-wider text-zinc-900 uppercase mb-4">PAID MEDIA</h3>
+                        <ul class="space-y-2 text-xs text-zinc-600">
+                            <li class="flex items-center gap-2">✔ Meta Ads</li>
+                            <li class="flex items-center gap-2">✔ Google Ads</li>
+                        </ul>
+                    </div>
+                    <span class="text-[10px] text-metaBlue-500 font-semibold tracking-wider uppercase mt-6 block">Paid Ads Specialist</span>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="border border-zinc-150 p-6 rounded-2xl bg-zinc-50 flex flex-col justify-between hover:border-metaBlue-200 transition-colors">
+                    <div>
+                        <div class="w-8 h-8 rounded-lg bg-metaBlue-500 text-white flex items-center justify-center text-xs font-bold mb-4">02</div>
+                        <h3 class="text-sm font-bold tracking-wider text-zinc-900 uppercase mb-4">GROWTH MARKETING</h3>
+                        <ul class="space-y-2 text-xs text-zinc-600">
+                            <li class="flex items-center gap-2">✔ Lead Generation</li>
+                            <li class="flex items-center gap-2">✔ Funnel Strategy</li>
+                            <li class="flex items-center gap-2">✔ Landing Page Opt</li>
+                            <li class="flex items-center gap-2">✔ Creative Testing</li>
+                        </ul>
+                    </div>
+                    <span class="text-[10px] text-metaBlue-500 font-semibold tracking-wider uppercase mt-6 block">Growth Marketing</span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="border border-zinc-150 p-6 rounded-2xl bg-zinc-50 flex flex-col justify-between hover:border-metaBlue-200 transition-colors">
+                    <div>
+                        <div class="w-8 h-8 rounded-lg bg-metaBlue-500 text-white flex items-center justify-center text-xs font-bold mb-4">03</div>
+                        <h3 class="text-sm font-bold tracking-wider text-zinc-900 uppercase mb-4">TRACKING & ANALYTICS</h3>
+                        <ul class="space-y-2 text-xs text-zinc-600">
+                            <li class="flex items-center gap-2">✔ Meta Pixel</li>
+                            <li class="flex items-center gap-2">✔ CAPI</li>
+                            <li class="flex items-center gap-2">✔ GTM (Google Tag Manager)</li>
+                            <li class="flex items-center gap-2">✔ GA4</li>
+                        </ul>
+                    </div>
+                    <span class="text-[10px] text-metaBlue-500 font-semibold tracking-wider uppercase mt-6 block">Technical Tracking</span>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="border border-zinc-150 p-6 rounded-2xl bg-zinc-50 flex flex-col justify-between hover:border-metaBlue-200 transition-colors">
+                    <div>
+                        <div class="w-8 h-8 rounded-lg bg-metaBlue-500 text-white flex items-center justify-center text-xs font-bold mb-4">04</div>
+                        <h3 class="text-sm font-bold tracking-wider text-zinc-900 uppercase mb-4">BUSINESS</h3>
+                        <ul class="space-y-2 text-xs text-zinc-600">
+                            <li class="flex items-center gap-2">✔ Fashion & E-commerce</li>
+                            <li class="flex items-center gap-2">✔ Lead Generation Business</li>
+                            <li class="flex items-center gap-2">✔ Customer Acquisition</li>
+                            <li class="flex items-center gap-2">✔ Conversion Optimization</li>
+                        </ul>
+                    </div>
+                    <span class="text-[10px] text-metaBlue-500 font-semibold tracking-wider uppercase mt-6 block">Business Acumen</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: PENUTUP -->
+    <section id="footer" class="min-h-screen flex items-center justify-center bg-zinc-900 text-white py-24 px-6 relative overflow-hidden">
+        <!-- Minimal subtle background visual -->
+        <div class="absolute inset-0 opacity-[0.05] pointer-events-none">
+            <div class="absolute -top-48 -left-48 w-96 h-96 rounded-full bg-metaBlue-500 blur-3xl"></div>
+            <div class="absolute -bottom-48 -right-48 w-96 h-96 rounded-full bg-metaBlue-500 blur-3xl"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto w-full relative z-10 text-center">
+            <span class="text-[11px] font-bold tracking-[0.2em] text-metaBlue-500 uppercase block mb-8">FILOSOFI & KOMITMEN PROFESIONAL</span>
+            
+            <h2 class="text-2xl md:text-4xl font-light tracking-tight text-white leading-relaxed mb-10 max-w-3xl mx-auto">
+                &ldquo;Saya percaya digital marketing bukan hanya tentang menjalankan iklan. <br class="hidden md:inline" />
+                <span class="font-normal text-metaBlue-100">Marketing adalah memahami perjalanan pelanggan dari pertama melihat iklan hingga akhirnya membeli.</span>&rdquo;
+            </h2>
+
+            <p class="text-xs md:text-sm text-zinc-400 max-w-xl mx-auto leading-relaxed mb-12">
+                As pemilik bisnis sekaligus advertiser, saya terbiasa melihat marketing dari sisi yang lebih utuh: traffic, leads, conversion, operasional, dan profit.
+            </p>
+
+            <div class="space-y-6">
+                <span class="text-xs tracking-widest text-zinc-500 uppercase block">Hubungi via Email / WhatsApp</span>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                    <!-- Dynamic modal triggers -->
+                    <button onclick="openContactModal('email')" class="w-full sm:w-auto px-8 py-3 bg-metaBlue-500 text-white text-xs font-semibold uppercase tracking-widest rounded-full hover:bg-metaBlue-600 transition-colors shadow-lg shadow-metaBlue-500/20">
+                        Kirim Email
+                    </button>
+                    <button onclick="openContactModal('whatsapp')" class="w-full sm:w-auto px-8 py-3 border border-zinc-700 hover:border-white text-white text-xs font-semibold uppercase tracking-widest rounded-full transition-colors">
+                        Hubungi WhatsApp 081359815703
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer Meta -->
+            <div class="mt-20 pt-10 border-t border-zinc-800 text-left flex flex-col md:flex-row justify-between items-center text-[10px] text-zinc-500 uppercase tracking-widest">
+                <span>Bagus Febriansyah, S.T</span>
+                <span class="mt-2 md:mt-0">Growth Marketing | Business Development</span>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- DYNAMIC CONTACT INFO MODAL -->
+<div id="contact-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-6 text-zinc-900 border border-zinc-150">
+        <h3 id="modal-title" class="text-sm font-bold tracking-wider uppercase text-metaBlue-500 mb-2">Hubungi Bagus</h3>
+        <p id="modal-desc" class="text-xs text-zinc-500 mb-6 leading-relaxed">Pintu kolaborasi siap dibuka. Klik tombol di bawah ini untuk memulai.</p>
+        
+        <div class="space-y-3">
+            <a id="modal-action-btn" href="#" target="_blank" class="block w-full text-center py-2.5 bg-metaBlue-500 hover:bg-metaBlue-600 text-white text-xs font-semibold uppercase tracking-widest rounded-lg transition-colors shadow-sm">
+                Lanjutkan
+            </a>
+            <button onclick="closeContactModal()" class="block w-full text-center py-2.5 bg-zinc-100 hover:bg-zinc-200 text-zinc-600 text-xs font-semibold uppercase tracking-widest rounded-lg transition-colors">
+                Batal
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // PRELOADER REVEAL NAME ON FIRST LOAD
+    window.addEventListener('DOMContentLoaded', () => {
+        const name = document.getElementById('reveal-name');
+        const title = document.getElementById('reveal-title');
+        const loaderBar = document.getElementById('loader-bar');
+        const preloader = document.getElementById('preloader');
+
+        // Stage 1: Load bar filling (Slowed down for a more cinematic and deliberate experience)
+        loaderBar.style.transition = 'width 2200ms ease-in-out';
+        setTimeout(() => {
+            loaderBar.style.width = '100%';
+        }, 200);
+
+        // Stage 2: Slide up name & subtitle fade-in (Timed perfectly with the slow loading bar)
+        setTimeout(() => {
+            name.classList.remove('opacity-0', 'translate-y-12');
+            name.classList.add('opacity-100', 'translate-y-0');
+            title.classList.remove('opacity-0', 'translate-y-8');
+            title.classList.add('opacity-100', 'translate-y-0');
+        }, 1200);
+
+        // Stage 3: Smooth slide preloader up out of view
+        setTimeout(() => {
+            preloader.classList.add('-translate-y-full');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 1500); // Menunggu durasi transisi slide-up selesai (1.5s)
+        }, 3600); // Mulai meluncur ke atas setelah apresiasi nama selesai (~3.6 detik)
+    });
+
+    // CONTACT ACTION HANDLERS
+    function openContactModal(type) {
+        const modal = document.getElementById('contact-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDesc = document.getElementById('modal-desc');
+        const actionBtn = document.getElementById('modal-action-btn');
+
+        if (type === 'email') {
+            modalTitle.innerText = 'HUBUNGI VIA EMAIL';
+            modalDesc.innerText = 'Ingin mendiskusikan penawaran iklan, audit funnel, atau prospek kerja sebagai Growth Marketing? Hubungi Bagus via Email.';
+            actionBtn.innerText = 'Kirim Email Baru';
+            actionBtn.href = 'mailto:bgsfebriansyah@gmail.com?subject=Tawaran%20Kolaborasi%20Growth%20Specialist';
+        } else {
+            modalTitle.innerText = 'HUBUNGI VIA WHATSAPP';
+            modalDesc.innerText = 'Hubungi langsung via aplikasi WhatsApp untuk berdiskusi langsung secara cepat, interaktif, dan responsif.';
+            actionBtn.innerText = 'Hubungi WhatsApp';
+            actionBtn.href = 'https://wa.me/6281359815703?text=Halo%20Bagus%2C%20saya%20tertarik%20berdiskusi%20tentang%20portfolio%20Growth%20%26%20Performance%20Marketing%20Anda.';
+        }
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+
+    function closeContactModal() {
+        const modal = document.getElementById('contact-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+
+    // Active Section Indicator logic for sticky side dots
+    const sections = document.querySelectorAll('section');
+    const navDots = document.querySelectorAll('.fixed.right-6 a');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navDots.forEach(dot => {
+            const href = dot.getAttribute('href');
+            const targetId = href.substring(1);
+            const dotCircle = dot.querySelector('div');
+            
+            // Highlight the active segment dots with Meta Blue accent
+            if (targetId === current || (current.startsWith('cs') && targetId === current)) {
+                dotCircle.classList.add('bg-metaBlue-500', 'border-metaBlue-500');
+                dotCircle.classList.remove('bg-white', 'border-zinc-300');
+            } else {
+                dotCircle.classList.remove('bg-metaBlue-500', 'border-metaBlue-500');
+                dotCircle.classList.add('bg-white', 'border-zinc-300');
+            }
+        });
+    });
+</script>
+</body>
+</html>
